@@ -1,0 +1,7 @@
+{
+  "init_cfg": {
+    "isLandscape": true,
+    "width": 852,
+    "height": 480
+  }
+}

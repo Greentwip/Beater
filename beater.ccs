@@ -1,0 +1,89 @@
+<Solution>
+  <PropertyGroup Name="SonicHD" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="content">
+          <Folder Name="animations">
+            <Folder Name="game">
+              <Image Name="gaiden.png" />
+              <Image Name="gaiden_ld.png" />
+              <Image Name="node_a.png" />
+              <Image Name="note_a.png" />
+              <Image Name="note_b.png" />
+            </Folder>
+            <Folder Name="title">
+              <Image Name="gyng_ld.png" />
+            </Folder>
+          </Folder>
+          <Folder Name="backgrounds">
+            <Folder Name="opening">
+              <Image Name="greentwip_logo.png" />
+            </Folder>
+            <Folder Name="title">
+              <Folder Name="game_logo" />
+              <Folder Name="title_green_hill" />
+            </Folder>
+          </Folder>
+          <Folder Name="fonts">
+            <TTF Name="sth_font.ttf" />
+          </Folder>
+          <Folder Name="sounds">
+            <Folder Name="bgm">
+              <Folder Name="levels">
+                <Folder Name="roller">
+                  <Audio Name="track.mp3" />
+                </Folder>
+              </Folder>
+              <Folder Name="menu">
+                <Audio Name="menu_music.mp3" />
+              </Folder>
+              <Folder Name="title">
+                <Audio Name="title_sound.mp3" />
+              </Folder>
+            </Folder>
+            <Folder Name="sfx">
+              <Folder Name="game">
+                <Folder Name="levan_polkka">
+                  <Audio Name="clap.mp3" />
+                  <Audio Name="hat.mp3" />
+                  <Audio Name="kick.mp3" />
+                  <Audio Name="snare.mp3" />
+                </Folder>
+                <Audio Name="ex.mp3" />
+                <Audio Name="fail.mp3" />
+                <Audio Name="launch.mp3" />
+                <Audio Name="metronome.mp3" />
+                <Audio Name="regular.mp3" />
+              </Folder>
+              <Folder Name="title">
+                <Audio Name="intro_sound.mp3" />
+                <Audio Name="start_sound.mp3" />
+              </Folder>
+            </Folder>
+          </Folder>
+        </Folder>
+        <Folder Name="game">
+          <Folder Name="gui">
+            <Project Name="hud.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="levels">
+            <Project Name="roller.csd" Type="Scene" />
+          </Folder>
+          <Folder Name="scenes">
+            <Folder Name="game_end" />
+            <Folder Name="menu">
+              <Project Name="main.csd" Type="Scene" />
+            </Folder>
+            <Folder Name="opening">
+              <Project Name="greentwip_logo.csd" Type="Scene" />
+            </Folder>
+            <Folder Name="title">
+              <Project Name="main.csd" Type="Scene" />
+            </Folder>
+          </Folder>
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
