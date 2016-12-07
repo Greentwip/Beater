@@ -5,7 +5,7 @@
 
 #include "game/scenes/title/title_scene.hpp"
 
-//#include "ui/UIVideoPlayer.h"
+#include "ui/UIVideoPlayer.h"
 
 USING_NS_CC;
 

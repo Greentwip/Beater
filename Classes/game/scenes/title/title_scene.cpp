@@ -40,8 +40,6 @@ bool title_scene::init()
         return false;
     }
 		
-	this->scheduleUpdate();
-
 	auto rootNode = CSLoader::createNode("game/scenes/title/main.csb");
 	auto timeline = CSLoader::createTimeline("game/scenes/title/main.csb");
 
@@ -62,28 +60,37 @@ bool title_scene::init()
 		auto audio_id = cocos2d::experimental::AudioEngine::play2d(audio->getFile(), audio->isLoop());
 	});
 
+	auto gyng =
+		static_cast<cocos2d::ui::ImageView*>(rootNode->getChildByName("gyng"));
+
+	gyng->setTouchEnabled(true);
+	gyng->addTouchEventListener([this](cocos2d::Ref* image_view, cocos2d::ui::Widget::TouchEventType type) {
+		switch (type) {
+			case cocos2d::ui::Widget::TouchEventType::BEGAN: {
+				if (this->_fading == false && this->_loaded) {
+					this->_fading = true;
+
+					cocos2d::experimental::AudioEngine::stopAll();
+
+					auto rootNode = this->getChildByName("scene");
+					auto start =
+						dynamic_cast<cocostudio::ComAudio*>(rootNode->getChildByName("start")->getComponent("start"));
+
+					auto audio_id = cocos2d::experimental::AudioEngine::play2d(start->getFile(), start->isLoop());
+
+					auto scene = menu_scene::createScene();
+					auto fade = cocos2d::TransitionFade::create(0.50, scene, cocos2d::Color3B(0, 0, 0));
+
+					cocos2d::Director::getInstance()->replaceScene(fade);
+
+				}
+
+			}
+
+			break;
+		}
+	});
+
     return true;
 }
 
-
-void title_scene::update(float dt) {
-
-	auto start_key = this->_joypad->get_key(windy::key::codes::start);
-	if (start_key->_pressed && !_fading && this->_loaded) {
-		_fading = true;
-
-		cocos2d::experimental::AudioEngine::stopAll();
-
-		auto rootNode = this->getChildByName("scene");
-		auto start = 
-			dynamic_cast<cocostudio::ComAudio*>(rootNode->getChildByName("start")->getComponent("start"));
-
-		auto audio_id = cocos2d::experimental::AudioEngine::play2d(start->getFile(), start->isLoop());
-
-		auto scene = menu_scene::createScene();
-		auto fade = cocos2d::TransitionFade::create(0.50, scene, cocos2d::Color3B(0, 0, 0));
-
-		cocos2d::Director::getInstance()->replaceScene(fade);
-
-	}
-}

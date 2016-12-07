@@ -1,11 +1,15 @@
 <Solution>
-  <PropertyGroup Name="SonicHD" Version="3.10.0.0" Type="CocosStudio" />
+  <PropertyGroup Name="Beater" Version="3.10.0.0" Type="CocosStudio" />
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Folder Name="content">
           <Folder Name="animations">
+            <Folder Name="end" />
             <Folder Name="game">
+              <Folder Name="roller">
+                <Image Name="miku.jpg" />
+              </Folder>
               <Image Name="gaiden.png" />
               <Image Name="gaiden_ld.png" />
               <Image Name="node_a.png" />
@@ -30,6 +34,9 @@
           </Folder>
           <Folder Name="sounds">
             <Folder Name="bgm">
+              <Folder Name="end">
+                <Audio Name="score_bgm.mp3" />
+              </Folder>
               <Folder Name="levels">
                 <Folder Name="roller">
                   <Audio Name="track.mp3" />
@@ -43,6 +50,10 @@
               </Folder>
             </Folder>
             <Folder Name="sfx">
+              <Folder Name="end">
+                <Audio Name="point_counter.mp3" />
+                <Audio Name="qualif_sound.mp3" />
+              </Folder>
               <Folder Name="game">
                 <Folder Name="levan_polkka">
                   <Audio Name="clap.mp3" />
@@ -50,8 +61,7 @@
                   <Audio Name="kick.mp3" />
                   <Audio Name="snare.mp3" />
                 </Folder>
-                <Audio Name="ex.mp3" />
-                <Audio Name="fail.mp3" />
+                <Audio Name="game_fail.mp3" />
                 <Audio Name="launch.mp3" />
                 <Audio Name="metronome.mp3" />
                 <Audio Name="regular.mp3" />
@@ -71,7 +81,9 @@
             <Project Name="roller.csd" Type="Scene" />
           </Folder>
           <Folder Name="scenes">
-            <Folder Name="game_end" />
+            <Folder Name="end">
+              <Project Name="main.csd" Type="Scene" />
+            </Folder>
             <Folder Name="menu">
               <Project Name="main.csd" Type="Scene" />
             </Folder>

@@ -178,10 +178,11 @@ public:
     ResourceData getRenderFile(); 
 
 	/**
-	* CCActionTweenDelegate
+	@brief The callback function when ActionTween is running.
+	@param value The new value of the specified key.
+	@param key The key of property which should be updated.
 	*/
 	void updateTweenAction(float value, const std::string& key);
-
 
 protected:
     virtual void initRenderer() override;

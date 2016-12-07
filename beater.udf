@@ -1,41 +1,41 @@
 <UserData Version="3.10.0.0">
   <Properties>
-    <Item Key="CocosRecentOperation">
-      <Value ctype="CocosRecentOperation">
-        <LastPublishType Value="Resource" />
-        <IsLastPublish Value="True" />
-        <LastRunType Value="Android" />
-      </Value>
-    </Item>
     <Item Key="PackageParamsKey">
       <Value ctype="PackageParams">
         <LuaIsEncrypt Value="False" />
         <LuaEncryptKey Value="" />
         <LuaEncryptSign Value="" />
-        <Android_PackageName Value="org.cocos.beater" />
+        <Android_PackageName Value="org.cocos.Beater" />
         <AndroidkeyStore Value="" />
         <AndroidVersion Value="android-19" />
-        <iOS_Target Value="beater iOS" />
+        <iOS_Target Value="Beater-mobile" />
         <iOS_BundleID Value="" />
         <Platform Value="Android" />
-        <RunPlatform Value="None" />
-        <FrameworkVersion Value="None" />
+        <RunPlatform Value="Android" />
+        <FrameworkVersion Value="cocos2d-x-3.10" />
         <IsDebugKeystore Value="True" />
-        <KeystorePassword Value="" />
-        <KeystoreAliasName Value="" />
-        <KeystoreAliasPassword Value="" />
         <EnableSourceMap Value="False" />
         <EnableHTML5Advanced Value="False" />
+      </Value>
+    </Item>
+    <Item Key="CocosRecentOperation">
+      <Value ctype="CocosRecentOperation">
+        <LastPublishType Value="Resource" />
+        <IsLastPublish Value="False" />
+        <LastRunType Value="Android" />
       </Value>
     </Item>
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
+          <FilePathData Path="game/scenes/end/main.csd" />
+          <FilePathData Path="game/scenes/menu/main.csd" />
           <FilePathData Path="game/gui/hud.csd" />
           <FilePathData Path="game/levels/roller.csd" />
-          <FilePathData Path="game/scenes/menu/main.csd" />
+          <FilePathData Path="game/scenes/title/main.csd" />
+          <FilePathData Path="game/scenes/opening/greentwip_logo.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="game/scenes/menu/main.csd" />
+        <ActiveDocument Path="game/levels/roller.csd" />
       </Value>
     </Item>
   </Properties>

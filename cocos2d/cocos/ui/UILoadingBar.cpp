@@ -435,7 +435,6 @@ void LoadingBar::updateTweenAction(float value, const std::string& key) {
 	this->setPercent(value);
 }
 
-
 }
 
 NS_CC_END

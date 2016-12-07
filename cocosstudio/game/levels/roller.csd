@@ -6,6 +6,16 @@
       <ObjectData Name="Scene" Tag="49" ctype="GameNodeObjectData">
         <Size X="852.0000" Y="480.0000" />
         <Children>
+          <AbstractNodeData Name="background" ActionTag="1635019635" Tag="74" IconVisible="False" LeftEage="660" RightEage="660" TopEage="370" BottomEage="370" Scale9OriginX="660" Scale9OriginY="370" Scale9Width="680" Scale9Height="384" ctype="ImageViewObjectData">
+            <Size X="852.0000" Y="480.0000" />
+            <AnchorPoint />
+            <Position />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition />
+            <PreSize X="1.0000" Y="1.0000" />
+            <FileData Type="Normal" Path="content/animations/game/roller/miku.jpg" Plist="" />
+          </AbstractNodeData>
           <AbstractNodeData Name="hud" ActionTag="-166261848" Tag="90" IconVisible="True" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="852.0000" Y="480.0000" />
             <AnchorPoint />
@@ -65,6 +75,16 @@
             <PrePosition X="-0.4574" Y="-0.4121" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="content/sounds/bgm/levels/roller/track.mp3" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="fail" ActionTag="1810223188" Tag="99" IconVisible="True" LeftMargin="51.3329" RightMargin="800.6671" TopMargin="-238.3131" BottomMargin="718.3131" Volume="1.0000" ctype="SimpleAudioObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position X="51.3329" Y="718.3131" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.0602" Y="1.4965" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Normal" Path="content/sounds/sfx/game/game_fail.mp3" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

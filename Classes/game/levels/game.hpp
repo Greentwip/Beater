@@ -29,18 +29,19 @@ public:
 	CREATE_FUNC(game);
 
 private:
+	void notify_match(const bool& is_match);
 	void trigger_color(const std::string& color);
 	void create_beat(const std::string& beat_kind);
 
 private:
-	enum class match_kind {
+	enum match_kind {
 		match, 
 		almost, 
 	};
 
 	class match {
 	public:
-		match(const std::string& color, const uint64_t& tag, const enum class match_kind& match_kind) {
+		match(const std::string& color, const uint64_t& tag, const enum match_kind& match_kind) {
 			this->_color = color;
 			this->_tag = tag;
 			this->_match_kind = match_kind;
@@ -54,14 +55,14 @@ private:
 			return this->_tag;
 		}
 
-		match_kind match_kind() {
+		enum match_kind match_kind() {
 			return this->_match_kind;
 		}
 
 	private:
 		std::string _color;
 		uint64_t _tag;
-		enum class match_kind _match_kind;
+		enum match_kind _match_kind;
 	};
 
 	class trigger {
@@ -98,7 +99,14 @@ private:
 	std::vector<std::shared_ptr<trigger> > _color_triggers; 
 
 
-	std::vector<std::shared_ptr<match> > _matches;
+	std::vector<std::shared_ptr<class match> > _matches;
+
+	uint32_t _match_combo;
+	uint32_t _miss_combo;
+
+	uint32_t _miss_combo_counter;
+	std::map<std::string, uint32_t> _beat_combo_totals;
+	std::map<std::string, uint32_t> _beat_combo_counters;
 
 };
 

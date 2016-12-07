@@ -40,8 +40,6 @@ bool menu_scene::init()
         return false;
     }
 		
-	this->scheduleUpdate();
-
 	auto rootNode = CSLoader::createNode("game/scenes/menu/main.csb");
 	auto timeline = CSLoader::createTimeline("game/scenes/menu/main.csb");
 
@@ -96,9 +94,4 @@ bool menu_scene::init()
 	});
 
     return true;
-}
-
-
-void menu_scene::update(float dt) {
-
 }
