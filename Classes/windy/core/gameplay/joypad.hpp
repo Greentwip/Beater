@@ -19,9 +19,10 @@ namespace windy {
 			}
 
 			
-			_maps[cocos2d::EventKeyboard::KeyCode::KEY_A] = key::codes::a;
-			_maps[cocos2d::EventKeyboard::KeyCode::KEY_S] = key::codes::b;
-			_maps[cocos2d::EventKeyboard::KeyCode::KEY_D] = key::codes::c;
+			_maps[cocos2d::EventKeyboard::KeyCode::KEY_Z] = key::codes::a;
+			_maps[cocos2d::EventKeyboard::KeyCode::KEY_X] = key::codes::b;
+			_maps[cocos2d::EventKeyboard::KeyCode::KEY_C] = key::codes::c;
+			_maps[cocos2d::EventKeyboard::KeyCode::KEY_V] = key::codes::d;
 			_maps[cocos2d::EventKeyboard::KeyCode::KEY_ENTER] = key::codes::start;
 
 			_maps[cocos2d::EventKeyboard::KeyCode::KEY_UP_ARROW] = key::codes::up;

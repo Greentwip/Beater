@@ -6,7 +6,7 @@
       <ObjectData Name="Scene" Tag="49" ctype="GameNodeObjectData">
         <Size X="852.0000" Y="480.0000" />
         <Children>
-          <AbstractNodeData Name="background" ActionTag="1635019635" Tag="74" IconVisible="False" LeftEage="660" RightEage="660" TopEage="370" BottomEage="370" Scale9OriginX="660" Scale9OriginY="370" Scale9Width="680" Scale9Height="384" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="background" ActionTag="1635019635" Tag="74" IconVisible="False" LeftEage="660" RightEage="660" TopEage="370" BottomEage="370" Scale9OriginX="660" Scale9OriginY="370" Scale9Width="600" Scale9Height="460" ctype="ImageViewObjectData">
             <Size X="852.0000" Y="480.0000" />
             <AnchorPoint />
             <Position />
@@ -14,7 +14,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="1.0000" Y="1.0000" />
-            <FileData Type="Normal" Path="content/animations/game/roller/miku.jpg" Plist="" />
+            <FileData Type="Normal" Path="content/animations/game/roller/miku.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="hud" ActionTag="-166261848" Tag="90" IconVisible="True" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="852.0000" Y="480.0000" />

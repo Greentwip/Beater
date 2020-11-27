@@ -5,7 +5,7 @@
 
 #include "audio/include/AudioEngine.h"
 
-#include "game/scenes/end/end_scene.hpp"
+//#include "game/scenes/end/end_scene.hpp"
 #include "game/scenes/menu/menu_scene.hpp"
 
 
@@ -175,11 +175,11 @@ bool game::init()
 			this->_hud_timeline->play("buttons_pop_out", false);
 			this->_playing = false;
 
-			auto scene = end_scene::createScene(this->_beat_combo_counters, this->_beat_combo_totals);
+			//auto scene = end_scene::createScene(this->_beat_combo_counters, this->_beat_combo_totals);
 
-			auto fade = cocos2d::TransitionFade::create(0.50, scene, cocos2d::Color3B(0, 0, 0));
+			//auto fade = cocos2d::TransitionFade::create(0.50, scene, cocos2d::Color3B(0, 0, 0));
 
-			cocos2d::Director::getInstance()->replaceScene(fade);
+			//cocos2d::Director::getInstance()->replaceScene(fade);
 
 		});
 
@@ -546,6 +546,28 @@ void game::create_beat(const std::string& beat_kind) {
 void game::update(float dt) {
 
 	auto start_key = this->_joypad->get_key(windy::key::codes::start);
+	auto a_key = this->_joypad->get_key(windy::key::codes::a);
+	auto b_key = this->_joypad->get_key(windy::key::codes::b);
+	auto c_key = this->_joypad->get_key(windy::key::codes::c);
+	auto d_key = this->_joypad->get_key(windy::key::codes::d);
+
+	if (a_key->_pressed) {
+		this->trigger_color("blue");
+	}
+
+	if (b_key->_pressed) {
+		this->trigger_color("green");
+	}
+
+	if (c_key->_pressed) {
+		this->trigger_color("yellow");
+	}
+
+	if (d_key->_pressed) {
+		this->trigger_color("purple");
+	}
+
+
 	if (this->_playing) {
 
 		auto audio_time = cocos2d::experimental::AudioEngine::getCurrentTime(this->_audio_id);

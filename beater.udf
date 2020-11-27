@@ -25,18 +25,5 @@
         <LastRunType Value="Android" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="game/scenes/end/main.csd" />
-          <FilePathData Path="game/scenes/menu/main.csd" />
-          <FilePathData Path="game/gui/hud.csd" />
-          <FilePathData Path="game/levels/roller.csd" />
-          <FilePathData Path="game/scenes/title/main.csd" />
-          <FilePathData Path="game/scenes/opening/greentwip_logo.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="game/levels/roller.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

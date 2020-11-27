@@ -28,6 +28,7 @@
 #ifndef __AUDIO_CACHE_H_
 #define __AUDIO_CACHE_H_
 
+#include <functional>
 #include <string>
 #include <mutex>
 #include <vector>
