@@ -54,7 +54,7 @@ void MessageBox(const char * msg, const char * title)
     [alert setAlertStyle:NSWarningAlertStyle];
 
     auto glview = Director::getInstance()->getOpenGLView();
-    id window = glview->getCocoaWindow();
+	NSWindow* window = static_cast<NSWindow*>(glview->getCocoaWindow());
     [alert beginSheetModalForWindow:window
                       modalDelegate:[window delegate]
                      didEndSelector:nil

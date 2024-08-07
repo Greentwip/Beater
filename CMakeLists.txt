@@ -112,6 +112,8 @@ include_directories(
   /usr/include/GLFW
   ${COCOS2D_ROOT}/cocos
   ${COCOS2D_ROOT}/cocos/platform
+  ${COCOS2D_ROOT}/cocos/editor-support
+  ${COCOS2D_ROOT}/external
   ${COCOS2D_ROOT}/cocos/audio/include/
   Classes
 )
@@ -148,6 +150,14 @@ else()
   else()
     add_executable(${APP_NAME} ${GAME_SRC})
   endif ( WIN32 )
+endif()
+
+find_library(ICONV_LIBRARY iconv)
+if (ICONV_LIBRARY)
+    message(STATUS "Found iconv library: ${ICONV_LIBRARY}")
+    target_link_libraries(${APP_NAME} ${ICONV_LIBRARY})
+else()
+    message(FATAL_ERROR "iconv library not found")
 endif()
 
 target_link_libraries(${APP_NAME} cocos2d)

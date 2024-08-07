@@ -3,7 +3,7 @@
 @class RootViewController;
 
 @interface AppController : NSObject <NSApplicationDelegate> {
-    UIWindow *window;
+    NSWindow *window;
 }
 
 @property(nonatomic, readonly) RootViewController* viewController;

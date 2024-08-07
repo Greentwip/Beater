@@ -1,5 +1,5 @@
 #include "opening_scene.hpp"
-#include "editor-support/cocostudio/CocoStudio.h"
+#include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "audio/include/AudioEngine.h"
 
