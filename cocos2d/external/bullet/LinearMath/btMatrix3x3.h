@@ -857,23 +857,10 @@ btMatrix3x3::operator+=(const btMatrix3x3& m)
 SIMD_FORCE_INLINE btMatrix3x3
 operator*(const btMatrix3x3& m, const btScalar & k)
 {
-#if (defined (BT_USE_SSE_IN_API) && defined (BT_USE_SSE))
-    __m128 vk = bt_splat_ps(_mm_load_ss((float *)&k), 0x80);
-    return btMatrix3x3(
-                _mm_mul_ps(m[0].mVec128, vk), 
-                _mm_mul_ps(m[1].mVec128, vk), 
-                _mm_mul_ps(m[2].mVec128, vk)); 
-#elif defined(BT_USE_NEON)
-    return btMatrix3x3(
-                vmulq_n_f32(m[0].mVec128, k),
-                vmulq_n_f32(m[1].mVec128, k),
-                vmulq_n_f32(m[2].mVec128, k)); 
-#else
 	return btMatrix3x3(
-		m[0].x()*k,m[0].y()*k,m[0].z()*k,
-		m[1].x()*k,m[1].y()*k,m[1].z()*k,
-		m[2].x()*k,m[2].y()*k,m[2].z()*k);
-#endif
+					   m[0].x()*k,m[0].y()*k,m[0].z()*k,
+					   m[1].x()*k,m[1].y()*k,m[1].z()*k,
+					   m[2].x()*k,m[2].y()*k,m[2].z()*k);
 }
 
 SIMD_FORCE_INLINE btMatrix3x3 

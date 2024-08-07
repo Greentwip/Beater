@@ -29,6 +29,8 @@
 #include "platform/CCPlatformConfig.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
+#import <AppKit/AppKit.h>
+
 
 #include "UIEditBoxImpl.h"
 

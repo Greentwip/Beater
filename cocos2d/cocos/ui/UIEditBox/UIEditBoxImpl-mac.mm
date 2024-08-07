@@ -182,7 +182,7 @@
 - (NSWindow *)window
 {
     auto glview = cocos2d::Director::getInstance()->getOpenGLView();
-    return glview->getCocoaWindow();
+    return static_cast<NSWindow*>(glview->getCocoaWindow());
 }
 
 - (void)setPosition:(NSPoint)pos

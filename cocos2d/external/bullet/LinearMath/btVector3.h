@@ -299,44 +299,7 @@ public:
 		
 		btAssert(length() != btScalar(0));
 
-#if defined(BT_USE_SSE_IN_API) && defined (BT_USE_SSE)		
-        // dot product first
-		__m128 vd = _mm_mul_ps(mVec128, mVec128);
-		__m128 z = _mm_movehl_ps(vd, vd);
-		__m128 y = _mm_shuffle_ps(vd, vd, 0x55);
-		vd = _mm_add_ss(vd, y);
-		vd = _mm_add_ss(vd, z);
-		
-        #if 0
-        vd = _mm_sqrt_ss(vd);
-		vd = _mm_div_ss(v1110, vd);
-		vd = bt_splat_ps(vd, 0x80);
-		mVec128 = _mm_mul_ps(mVec128, vd);
-        #else
-        
-        // NR step 1/sqrt(x) - vd is x, y is output 
-        y = _mm_rsqrt_ss(vd); // estimate 
-        
-        //  one step NR 
-        z = v1_5;
-        vd = _mm_mul_ss(vd, vHalf); // vd * 0.5	
-        //x2 = vd;
-        vd = _mm_mul_ss(vd, y); // vd * 0.5 * y0
-        vd = _mm_mul_ss(vd, y); // vd * 0.5 * y0 * y0
-        z = _mm_sub_ss(z, vd);  // 1.5 - vd * 0.5 * y0 * y0 
-
-        y = _mm_mul_ss(y, z);   // y0 * (1.5 - vd * 0.5 * y0 * y0)
-
-		y = bt_splat_ps(y, 0x80);
-		mVec128 = _mm_mul_ps(mVec128, y);
-
-        #endif
-
-		
-		return *this;
-#else	
 		return *this /= length();
-#endif
 	}
 
   /**@brief Return a normalized version of this vector */

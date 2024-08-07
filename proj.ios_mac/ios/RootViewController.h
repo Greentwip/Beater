@@ -23,10 +23,10 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#import <UIKit/UIKit.h>
+#import <AppKit/AppKit.h>
 
 
-@interface RootViewController : UIViewController {
+@interface RootViewController : NSViewController {
 
 }
 - (BOOL) prefersStatusBarHidden;

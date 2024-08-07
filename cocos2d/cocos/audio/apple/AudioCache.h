@@ -34,6 +34,7 @@
 #include <string>
 #include <mutex>
 #include <vector>
+#include <functional>
 
 #include "CCPlatformMacros.h"
 
