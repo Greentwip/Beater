@@ -93,7 +93,7 @@ set(PLATFORM_SPECIFIC_SRC)
 set(PLATFORM_SPECIFIC_HEADERS)
 if(MACOSX OR APPLE)
 set(PLATFORM_SPECIFIC_SRC
-  proj.ios_mac/ios/main.m
+  proj.ios_mac/ios/main.mm
   proj.ios_mac/ios/RootViewController.mm
   proj.ios_mac/ios/AppController.mm
 )
