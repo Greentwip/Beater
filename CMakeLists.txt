@@ -28,6 +28,14 @@ cmake_minimum_required(VERSION 2.8)
 set(APP_NAME MyGame)
 project (${APP_NAME})
 
+# Set the minimum C++ standard to C++14
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Optional: Prevent using extensions of the specified standard
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${COCOS2D_ROOT}/cmake/Modules/")
